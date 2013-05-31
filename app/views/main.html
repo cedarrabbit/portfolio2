@@ -1,0 +1,32 @@
+<header>
+	<h2>{{model.name}}</h2>
+	<P>{{model.title}}</P>
+	<P class="lead">{{model.lead}}</P>
+</header>
+
+<section class="timeline">
+	<div class="markers">
+		<div class="marker" ng-repeat="project in model.projects">
+			<div class="body"></div> <!--bad design to draw with divs-->
+			<p class="year" year><p>
+		</div>
+	</div>
+</section>
+
+<section class="portfolio">
+	<div class="project" ng-repeat="project in model.projects">
+		<!-- <div class="thumb"></div> -->
+		<img ng-src="{{project.thumb}}">
+		<p class="name">{{project.name}}</p>
+		<p class="description">{{project.description}}</p>
+	</div>
+</section>
+
+<footer>
+	<div class="chart">
+		<div class="filter">
+			<p class="name">DIRECTOR</p>
+			<div class="bar"></div>
+		</div>
+	</div>
+</footer>
